@@ -1,1 +1,1 @@
-var myswiper=new Swiper(".swiper-container",{pagination:{el:".swiper-pagination"}});
+var myswiper=new Swiper(".swiper-container",{pagination:{el:".swiper-pagination"}}),bscroll=new BScroll("section");

@@ -23,8 +23,9 @@ var options = {
 gulp.task("minHtml", function() {
     gulp.src("./src/*.html")
         .pipe(cleacHtml(options))
+        .pipe(gulp.dest("./src/htmlGzip"))
 });
 gulp.task("watch", function() {
     gulp.watch("./src/scss/*.scss", ["defaults"])
 })
-gulp.task("dev", ['defaults', 'readjs', 'watch'])
+gulp.task("dev", ['defaults', 'readjs', 'watch', 'minHtml'])
